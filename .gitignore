@@ -12,3 +12,4 @@ build
 .classpath
 server/target
 server/.idea
+server/.idea/*
