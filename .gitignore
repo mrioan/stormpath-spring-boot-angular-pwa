@@ -1,0 +1,14 @@
+target
+build
+.gradle
+.idea
+.clover
+*.ipr
+*.iws
+*.iml
+.DS_Store
+.project
+.settings
+.classpath
+server/target
+server/.idea
