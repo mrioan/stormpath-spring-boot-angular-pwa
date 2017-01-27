@@ -1,12 +1,14 @@
 package com.example;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@RestController
 public class BeerController {
 
     private BeerRepository repository;

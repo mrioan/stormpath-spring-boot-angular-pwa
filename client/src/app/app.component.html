@@ -2,6 +2,7 @@
   {{title}}
 </h1>
 
+<sp-authport></sp-authport>
 <div *ngIf="(user$ | async)" class="row text-center">
   <h2 class="">
     Welcome, {{ ( user$ | async ).givenName }}!
@@ -12,4 +13,8 @@
 </div>
 <div [hidden]="!(user$ | async)">
   <!-- secure main component or <router-outlet></router-outlet> -->
+</div>
+
+<div [hidden]="!(user$ | async)">
+  <beer-list></beer-list>
 </div>

@@ -5,15 +5,18 @@ import { HttpModule } from '@angular/http';
 import { StormpathConfiguration, StormpathModule } from 'angular-stormpath';
 
 import { AppComponent } from './app.component';
+import { BeerListComponent } from './beer-list/beer-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BeerListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    StormpathModule
   ],
   providers: [{
     provide: StormpathConfiguration, useFactory: stormpathConfig
@@ -25,6 +28,7 @@ export class AppModule { }
 
 export function stormpathConfig(): StormpathConfiguration {
   let spConfig: StormpathConfiguration = new StormpathConfiguration();
-  spConfig.endpointPrefix = 'https://raible.apps.stormpath.io';
+  spConfig.endpointPrefix = 'http://localhost:8080';
+  spConfig.autoAuthorizedUris.push(new RegExp('http://localhost:8080/good-beers'));
   return spConfig;
 }
