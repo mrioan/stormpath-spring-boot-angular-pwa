@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { StormpathConfiguration, StormpathModule } from 'angular-stormpath';
-
+import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -14,7 +14,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StormpathModule
+    StormpathModule,
+    MaterialModule.forRoot()
   ],
   providers: [{
     provide: StormpathConfiguration, useFactory: stormpathConfig

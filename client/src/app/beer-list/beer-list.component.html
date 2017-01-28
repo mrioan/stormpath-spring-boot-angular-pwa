@@ -1,13 +1,10 @@
 <h2>Beer List</h2>
 
-<div *ngFor="let b of beers">
-  {{b.name}}
-</div>
-
-<div class=”lang:html mark: 3” title=”src/app/beer-list/beer-list.component.html”>
-<div *ngFor="let b of beers">
-  {{b.name}}<br>
-  <img width="100" src="{{b.giphyUrl}}" alt="{{b.name}}">
-</div>
-</div>
-
+<md-list>
+  <md-list-item *ngFor="let b of beers">
+    <img md-list-avatar src="{{b.giphyUrl}}" alt="{{b.name}}">
+    <h3 md-line>
+      {{b.name}}
+    </h3>
+  </md-list-item>
+</md-list>
