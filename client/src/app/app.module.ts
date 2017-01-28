@@ -5,12 +5,10 @@ import { HttpModule } from '@angular/http';
 import { StormpathConfiguration, StormpathModule } from 'angular-stormpath';
 
 import { AppComponent } from './app.component';
-import { BeerListComponent } from './beer-list/beer-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BeerListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
